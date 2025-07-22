@@ -1,0 +1,390 @@
+/* General Styling */
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f7f6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+header {
+  background: #2c3e50; /* Biru tua/abu-abu */
+  color: #fff;
+  padding: 1rem 0; /* Padding vertikal */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek elevasi */
+}
+
+/* Memastikan container di dalam header tidak memiliki padding horizontal */
+header .container {
+  padding: 0; /* Menghilangkan padding kiri dan kanan */
+}
+
+header h1 {
+  margin: 0;
+  float: left;
+  font-weight: 700;
+  display: flex; /* Menggunakan flexbox untuk menata logo dan teks */
+  align-items: center; /* Menyelaraskan item secara vertikal di tengah */
+  gap: 10px; /* Jarak antar logo dan teks */
+  padding-left: 20px; /* Menambahkan padding kiri agar tidak menempel ke tepi browser */
+}
+
+.header-logo {
+  height: 30px; /* Atur tinggi logo */
+  width: auto; /* Lebar otomatis sesuai rasio aspek */
+  vertical-align: middle; /* Menyelaraskan logo dengan teks */
+}
+
+header nav {
+  float: right;
+  padding-right: 20px; /* Menambahkan padding kanan agar tidak menempel ke tepi browser */
+}
+
+header nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #1abc9c; /* Teal */
+}
+
+/* Clearfix for header */
+header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Hero Section */
+/* Hero Section */
+.hero {
+  position: relative; /* Penting untuk positioning anak absolut */
+  height: 300px; /* Atur tinggi hero section */
+  overflow: hidden; /* Sembunyikan bagian gambar yang tidak terlihat */
+  color: #fff;
+  text-align: center;
+  padding: 100px 0; /* Padding untuk konten teks */
+  margin-bottom: 40px;
+  display: flex; /* Untuk memposisikan konten di tengah secara vertikal */
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    rgba(44, 62, 80, 0.8),
+    rgba(44, 62, 80, 0.8)
+  ); /* Overlay warna */
+  z-index: 1; /* Di atas gambar, di bawah teks */
+}
+
+.hero-content {
+  /* Konten teks di dalam hero */
+  position: relative;
+  z-index: 2; /* Di atas overlay */
+}
+
+#hero-images-wrapper {
+  display: flex; /* Untuk menata gambar secara horizontal */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  /* Lebar akan diatur oleh JavaScript: (jumlah gambar * 100%) */
+  transition: transform 1s ease-in-out; /* Transisi untuk efek geser */
+}
+
+#hero-images-wrapper img {
+  /* Lebar setiap gambar akan diatur oleh JavaScript */
+  height: 100%;
+  object-fit: cover; /* Memastikan gambar mengisi area tanpa terdistorsi */
+  flex-shrink: 0; /* Mencegah gambar menyusut */
+}
+
+.hero h2 {
+  font-size: 2.8em;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.2em;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Card Section */
+.card-section {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.card-section h3 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+.card-grid {
+  display: grid;
+  /* Membuat grid responsif dengan kolom minimal 280px */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px; /* Jarak antar kartu */
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px; /* Sudut membulat */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Bayangan kartu */
+  padding: 30px;
+  text-align: center;
+  cursor: pointer; /* Mengubah kursor menjadi pointer saat di atas kartu */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi halus saat hover */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Mengangkat kartu sedikit saat di-hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Bayangan lebih besar saat di-hover */
+}
+
+.card img {
+  width: 300px;
+  height: 150px;
+  margin-bottom: 20px;
+  border-radius: 8px; /* Diperbarui: Mengubah dari 50% menjadi 8px untuk sudut membulat */
+  object-fit: cover; /* Memastikan gambar mengisi area tanpa terdistorsi */
+  border: 3px solid #1abc9c; /* Border hijau kebiruan pada gambar */
+}
+
+.card h4 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #34495e;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 0.95em;
+  color: #555;
+}
+
+/* News Section */
+.news-section {
+  padding: 60px 0; /* Padding lebih besar untuk bagian berita */
+  text-align: center;
+  background-color: #eef2f3; /* Latar belakang sedikit berbeda untuk bagian ini */
+  margin-top: 40px; /* Jarak dari bagian di atasnya */
+}
+
+.news-section h3 {
+  font-size: 2.2em;
+  margin-bottom: 40px;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px; /* Jarak antar kartu berita */
+  justify-content: center;
+}
+
+.article-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Penting untuk gambar agar tidak keluar dari batas */
+  text-align: left; /* Teks di dalam kartu rata kiri */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.article-card img {
+  width: 100%; /* Gambar mengisi lebar kartu */
+  height: 200px; /* Tinggi gambar tetap */
+  object-fit: cover; /* Memastikan gambar mengisi area tanpa terdistorsi */
+  border-radius: 10px 10px 0 0; /* Sudut membulat hanya di bagian atas */
+}
+
+.article-content {
+  padding: 20px;
+}
+
+.article-content h4 {
+  font-size: 1.3em;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #34495e;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.article-content p {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.article-content .read-more {
+  display: inline-block;
+  color: #1abc9c; /* Warna tautan baca selengkapnya */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.article-content .read-more:hover {
+  color: #2c3e50; /* Warna hover */
+}
+
+.article-content .read-more i {
+  margin-left: 5px;
+  font-size: 0.9em;
+}
+
+/* Footer */
+footer {
+  background: #233140; /* Warna latar belakang footer yang lebih gelap dan kaya */
+  color: #e0e6eb; /* Warna teks yang lebih terang dan lembut */
+  padding: 50px 0 20px; /* Padding atas lebih besar untuk ruang */
+  margin-top: 60px; /* Margin atas lebih besar untuk pemisahan */
+  font-size: 0.95em; /* Ukuran font sedikit lebih besar */
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Bayangan di bagian atas footer */
+}
+
+.footer-content {
+  display: flex; /* Menggunakan flexbox untuk tata letak kolom */
+  flex-wrap: wrap; /* Memungkinkan kolom untuk wrap di layar kecil */
+  justify-content: space-around; /* Menyebar kolom secara merata dengan ruang di sekitar */
+  gap: 40px; /* Jarak antar kolom lebih besar */
+  padding-bottom: 30px; /* Padding bawah sebelum copyright */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15); /* Garis pemisah yang sedikit lebih tebal */
+  margin-bottom: 20px; /* Jarak antara garis pemisah dan copyright */
+}
+
+.footer-section {
+  flex: 1; /* Setiap bagian mengambil porsi yang sama */
+  min-width: 280px; /* Lebar minimum yang sedikit lebih besar untuk setiap kolom */
+  padding: 0 15px; /* Padding internal untuk setiap bagian */
+}
+
+.footer-section h4 {
+  color: #1abc9c; /* Warna judul bagian footer */
+  margin-bottom: 20px; /* Jarak bawah judul lebih besar */
+  font-size: 1.2em; /* Ukuran font judul sedikit lebih besar */
+  font-weight: 700;
+  text-transform: uppercase; /* Membuat judul menjadi huruf kapital */
+  letter-spacing: 0.5px; /* Jarak antar huruf */
+}
+
+.footer-section p {
+  margin-bottom: 12px; /* Jarak antar paragraf lebih baik */
+  line-height: 1.7; /* Tinggi baris yang lebih nyaman dibaca */
+}
+
+.footer-section i {
+  margin-right: 12px; /* Jarak ikon dari teks */
+  color: #1abc9c; /* Warna ikon */
+  font-size: 1.1em; /* Ukuran ikon sedikit lebih besar */
+}
+
+.social-links {
+  margin-top: 20px; /* Jarak atas untuk ikon sosial media */
+}
+
+.social-links a {
+  color: #e0e6eb; /* Warna ikon sosial media */
+  font-size: 1.8em; /* Ukuran ikon sosial media lebih besar */
+  margin-right: 20px; /* Jarak antar ikon sosial media */
+  transition: color 0.3s ease, transform 0.2s ease; /* Transisi untuk hover dan scale */
+  display: inline-block; /* Memastikan transform bekerja dengan baik */
+}
+
+.social-links a:hover {
+  color: #1abc9c; /* Warna hover untuk ikon sosial media */
+  transform: translateY(-3px) scale(1.1); /* Efek mengangkat dan sedikit membesar saat hover */
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 15px; /* Padding atas untuk copyright */
+  color: rgba(255, 255, 255, 0.6); /* Warna teks copyright yang lebih lembut */
+  font-size: 0.85em; /* Ukuran font copyright sedikit lebih kecil */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1,
+  header nav {
+    float: none;
+    text-align: center;
+  }
+
+  header nav ul li {
+    margin: 0 10px;
+  }
+
+  .hero h2 {
+    font-size: 2em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr; /* Stack cards on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 60px 0;
+  }
+
+  .hero h2 {
+    font-size: 1.8em;
+  }
+
+  .card {
+    padding: 20px;
+  }
+}
