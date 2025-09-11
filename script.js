@@ -8,10 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // Ganti dengan jalur (path) ke file gambar Anda sendiri.
   // Pastikan jalur relatif terhadap file index.html atau file CSS/JS.
   const images = [
-    "gambar1.jpg", // Mengambil gambar dari folder 'images'
-    "gambar2.png",
-    "gambar3.jpg",
-    "gambar4.jpg",
+    "WS1.jpg", // Mengambil gambar dari folder 'images'
+    "WS2.png",
+    "WS3.jpg",
+    "mekanik.png",
   ];
 
   let currentImageIndex = 0; // Indeks gambar yang sedang ditampilkan
@@ -67,3 +67,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
