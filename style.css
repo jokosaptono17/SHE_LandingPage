@@ -126,6 +126,7 @@ header::after {
   height: 100%;
   object-fit: cover; /* Memastikan gambar mengisi area tanpa terdistorsi */
   flex-shrink: 0; /* Mencegah gambar menyusut */
+  opacity: 1; /* contoh: gambar agak transparan */
 }
 
 .hero h2 {
@@ -388,3 +389,4 @@ footer {
     padding: 20px;
   }
 }
+
