@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
   slideHeroBackground();
 
   // Set interval untuk mengubah gambar setiap 5 detik (5000 milidetik)
-  setInterval(slideHeroBackground, 5000);
+  setInterval(slideHeroBackground, 3000);
 
   // --- Fungsionalitas Klik Kartu ---
   const cards = document.querySelectorAll(".card");
@@ -67,4 +67,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 
