@@ -1,59 +1,63 @@
-// Memastikan kode JavaScript berjalan setelah seluruh dokumen HTML dimuat
 document.addEventListener("DOMContentLoaded", () => {
-  // --- Fungsionalitas Carousel Gambar Hero ---
-  const heroSection = document.getElementById("hero-section");
+  // --- 1. Navbar Scroll Effect ---
+  const header = document.getElementById("main-header");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
+
+  // --- 2. Carousel Logika (Diperbarui untuk efisiensi) ---
   const heroImagesWrapper = document.getElementById("hero-images-wrapper");
 
-  // Array URL gambar untuk carousel.
-  // Ganti dengan jalur (path) ke file gambar Anda sendiri.
-  // Pastikan jalur relatif terhadap file index.html atau file CSS/JS.
-  const images = [
-    "WS1.jpg", // Mengambil gambar dari folder 'images'
-    "WS2.png",
-    "WS3.jpg",
-    "mekanik.png",
-  ];
+  // Daftar Gambar (Sesuai nama file Anda)
+  const images = ["WS1.jpg", "WS2.png", "WS3.jpg", "mekanik.png"];
 
-  let currentImageIndex = 0; // Indeks gambar yang sedang ditampilkan
+  let currentImageIndex = 0;
 
-  // Secara dinamis membuat elemen gambar dan menambahkannya ke wrapper
-  images.forEach((src) => {
-    const img = document.createElement("img");
-    img.src = src;
-    img.alt = "SHE Background Image"; // Alt text generik, bisa diperbaiki
-    heroImagesWrapper.appendChild(img);
-  });
+  // Setup Awal Carousel
+  function initCarousel() {
+    // Bersihkan wrapper jika ada isi sebelumnya
+    heroImagesWrapper.innerHTML = "";
 
-  // Mengatur lebar wrapper berdasarkan jumlah gambar
-  // Setiap gambar akan mengambil 100% dari lebar heroSection, jadi wrapper membutuhkan (jumlahGambar * 100%)
-  heroImagesWrapper.style.width = `${images.length * 100}%`;
-  // Mengatur lebar setiap gambar di dalam wrapper
-  heroImagesWrapper.querySelectorAll("img").forEach((img) => {
-    img.style.width = `${100 / images.length}%`;
-  });
+    // Atur lebar wrapper
+    heroImagesWrapper.style.width = `${images.length * 100}%`;
 
-  // Fungsi untuk mengubah gambar latar belakang hero dengan efek geser
+    // Masukkan gambar
+    images.forEach((src) => {
+      const img = document.createElement("img");
+      img.src = src;
+      img.alt = "SHE Plant Highlight";
+      // Set lebar tiap gambar
+      img.style.width = `${100 / images.length}%`;
+      heroImagesWrapper.appendChild(img);
+    });
+  }
+
+  // Fungsi Geser
   function slideHeroBackground() {
-    // Hitung posisi geser berdasarkan indeks gambar saat ini
-    // Misalnya, untuk gambar kedua (indeks 1), geser -25% (jika ada 4 gambar)
     const offset = -currentImageIndex * (100 / images.length);
     heroImagesWrapper.style.transform = `translateX(${offset}%)`;
 
-    // Pindah ke gambar berikutnya, kembali ke awal jika sudah mencapai akhir array
+    // Update index untuk putaran berikutnya
     currentImageIndex = (currentImageIndex + 1) % images.length;
   }
 
-  // Panggil fungsi pertama kali untuk mengatur posisi awal (menampilkan gambar pertama)
-  slideHeroBackground();
+  // Jalankan
+  initCarousel();
+  // Delay sedikit agar transisi awal tidak 'lompat', baru mulai interval
+  setTimeout(slideHeroBackground, 100);
+  setInterval(slideHeroBackground, 5000); // 5 Detik per geseran
 
-  // Set interval untuk mengubah gambar setiap 5 detik (5000 milidetik)
-  setInterval(slideHeroBackground, 3000);
-
-  // --- Fungsionalitas Klik Kartu ---
+  // --- 3. Card Click Logic (Tetap dipertahankan karena fungsional) ---
   const cards = document.querySelectorAll(".card");
 
   cards.forEach((card) => {
-    card.addEventListener("click", () => {
+    card.addEventListener("click", (e) => {
+      // Mencegah klik jika user menyeleksi teks
       const url = card.dataset.url;
       const target = card.getAttribute("target");
 
@@ -66,6 +70,17 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  // --- 4. Smooth Scroll untuk Link Anchor ---
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+        target.scrollIntoView({
+          behavior: "smooth",
+        });
+      }
+    });
+  });
 });
-
-
