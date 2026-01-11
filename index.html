@@ -4,194 +4,279 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PLANT ASTO - Safety, Health, Environment</title>
-    <!-- Tautan ke file CSS utama -->
+    <title>PLANT ASTO - Future Safety Hub</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Tautan ke Google Fonts (Montserrat untuk tampilan modern) -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- Tautan ke Font Awesome untuk ikon sosial media -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Rajdhani:wght@500;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <h1>
-                <!-- Logo 1 -->
+    <div class="ambient-light one"></div>
+    <div class="ambient-light two"></div>
+
+    <header id="main-header">
+        <div class="container header-container">
+            <div class="logo-area">
                 <img src="logo1.png" alt="Logo SHE 1" class="header-logo">
-                <!-- Logo 2 -->
-                SHE PLANT
-            </h1>
+                <div class="logo-text">
+                    <h1>SHE PLANT</h1>
+                    <span class="subtitle">ASTO DIGITAL INNOVATION</span>
+                </div>
+            </div>
             <nav>
-                <ul>
-                    <li><a href="#">Beranda</a></li>
-                    <li><a href="#">Tentang Kami</a></li>
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Beranda</a></li>
+                    <li><a href="#">Tentang</a></li>
                     <li><a href="#">Kontak</a></li>
                 </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
             </nav>
         </div>
     </header>
 
     <main>
-        <!-- Bagian Hero (Sambutan Utama) -->
         <section class="hero" id="hero-section">
-            <!-- Overlay warna yang akan berada di atas gambar -->
             <div class="hero-overlay"></div>
 
-            <!-- Wrapper untuk gambar-gambar carousel. Gambar akan ditambahkan oleh JavaScript. -->
             <div id="hero-images-wrapper">
-                <!-- Gambar akan secara dinamis ditambahkan di sini oleh JavaScript -->
             </div>
 
-            <!-- Konten teks hero yang akan berada di atas overlay dan gambar -->
             <div class="container hero-content">
-                <h2>Prioritaskan Keselamatan, Jaga Lingkungan, Sehatkan Kehidupan</h2>
-                <p>Bersama kita, wujudkan lingkungan kerja yang aman, sehat, dan lestari.</p>
+                <span class="tagline">SAFETY FIRST, KITA SATU-BISA-HEBAT</span>
+                <h2>Prioritaskan Keselamatan<br>Jaga <span class="text-gradient">Lingkungan</span></h2>
+                <p>Mewujudkan ekosistem kerja pertambangan yang aman, sehat, dan terintegrasi teknologi digital.</p>
+                <a href="#topic-section" class="btn-glow">Mulai Eksplorasi</a>
             </div>
         </section>
 
-
-        <section class="card-section">
+        <section class="card-section" id="topic-section">
             <div class="container">
-                <h3>Pilih Topik SHE</h3>
+                <div class="section-title">
+                    <h3>Akses Cepat SHE</h3>
+                    <div class="underline"></div>
+                </div>
+
                 <div class="card-grid">
-                   
-                    <div class="card"
-                        data-url="https://docs.google.com/forms/d/e/1FAIpQLSe0k6vSiJOoOaESL9RZsKfz-gUWysGgtlZuKBQvnLEo1wcNWA/viewform?usp=header"
+                    <div class="card glass-effect"
+                        data-url="https://docs.google.com/forms/d/e/1FAIpQLSevIp8tJPYGbLb0I76W4ti1nWEjh0q3Y6o5dwXppRZoz276Kw/viewform?usp=header"
                         target="_blank">
-                        <img src="workshop.jpg" alt="Ikon Lingkungan">
-                        <h4>SOAL INDUKSI PLANT</h4>
-                        <p>Induksi plant dilakukan pada hari H+2 (setelah induksi SHE) pasca kedatangan istirahat site.berisi terkait refresh materi KMMS,Hand and Finger Injury,LoTo,PowerTools.</p>
+                        <div class="card-img-holder">
+                            <img src="workshop.jpg" alt="Induksi Plant">
+                        </div>
+                        <div class="card-body">
+                            <h4>Soal Induksi Plant</h4>
+                            <p>Refresh materi KMMS, Hand & Finger Injury, LoTo, PowerTools pasca cuti.</p>
+                        </div>
+                        <div class="card-footer">
+                            <span>Akses Form <i class="fas fa-arrow-right"></i></span>
+                        </div>
                     </div>
-                    <!-- Kartu Pelatihan & Sertifikasi (Contoh link eksternal) -->
-                    <div class="card"
-                        data-url="https://script.google.com/macros/s/AKfycbwM3xpx1VNMsFIc8Y21aeqC7zpj7aNSftN93uc1XqyomjId1vs70xrMVptemrzfGcKo_Q/exec"
+
+                    <div class="card glass-effect"
+                        data-url="https://script.google.com/macros/s/AKfycby4CF6HQZJM-Z2VlWDVHK_qEE_5sc4OE8A_Q2s89bKXRQ6IOcb5qiRTCvhEc3bTKVF4/exec"
                         target="_blank">
-                        <img src="ResultPlant.png" alt="Ikon Pelatihan">
-                        <h4>HASIL INDUKSI PLANT</h4>
-                        <p>Hasil induksi plant berupa SERTIFIKAT jika nilai ujian diatas 80 poin.SERTIFIKAT berguna sebagai syarat pengajuan MINE PERMIT (sama dengan sertifikat H&F injury,LOTO,POWERTOOLS).</p>
+                        <div class="card-img-holder">
+                            <img src="ResultPlant.png" alt="Hasil Induksi">
+                        </div>
+                        <div class="card-body">
+                            <h4>Hasil Induksi Plant</h4>
+                            <p>Cetak sertifikat kelulusan (nilai >80) sebagai syarat Mine Permit.</p>
+                        </div>
+                        <div class="card-footer">
+                            <span>Cek Hasil <i class="fas fa-arrow-right"></i></span>
+                        </div>
                     </div>
-                   
-                    <div class="card"
-                        data-url="https://docs.google.com/forms/d/e/1FAIpQLScqEoj0x2rJlZ63XkQg_LBI0b-Ps79PAGpT2JpvYbxr89kapA/viewform?usp=header"
+
+                    <div class="card glass-effect"
+                        data-url="https://docs.google.com/forms/d/e/1FAIpQLSe1ImAPteHZNDpg4n5oD-lSbyJ94cUNSAujazYk5G-V3MQfew/viewform?usp=header"
                         target="_blank">
-                        <img src="PowerTools.jpg" alt="Ikon Pelatihan">
-                        <h4>Soal Hand&Finger LOTO POWER TOOLS</h4>
-                        <p>Link soal Hand & Finger,LOTO,POWERTOOLS.Peserta dinyatakan kompeten/lulus jika nilai ditas 80.</p>
+                        <div class="card-img-holder">
+                            <img src="PowerTools.jpg" alt="Power Tools">
+                        </div>
+                        <div class="card-body">
+                            <h4>Soal H&F LOTO PowerTools</h4>
+                            <p>Ujian kompetensi khusus peralatan kerja kritis dan keselamatan tangan.</p>
+                        </div>
+                        <div class="card-footer">
+                            <span>Mulai Ujian <i class="fas fa-arrow-right"></i></span>
+                        </div>
                     </div>
-                    <div class="card" data-url="https://script.google.com/macros/s/AKfycbxRfPRuJTfE8m0ziSfp0gRxopdkAvqM9HeerU8UAsFOm3Rxpn68FTcTn6oRkpKC87Mh/exec">
-                        <img src="certificate.png" alt="Ikon Pelatihan">
-                        <h4>Certificate Hand&Finger LOTO POWER TOOLS</h4>
-                        <p>Hasil pengerjaan soal Hand & Finger Injury,LOTO,POWERTOOLS dan juga download sertfikiat.sebagai salah satu syarat pengajuan mine permit .</p>
+
+                    <div class="card glass-effect"
+                        data-url="https://script.google.com/macros/s/AKfycbwZRcUy5uC22kT7qKvkbPNW0bD8MlH1ZhrzmADsIg5qPlx7s_h-cbCO9Rn-gK3WeWKE/exec">
+                        <div class="card-img-holder">
+                            <img src="certificate.png" alt="Sertifikat">
+                        </div>
+                        <div class="card-body">
+                            <h4>Sertifikat Kompetensi</h4>
+                            <p>Download sertifikat H&F Injury, LOTO, dan PowerTools.</p>
+                        </div>
+                        <div class="card-footer">
+                            <span>Download <i class="fas fa-download"></i></span>
+                        </div>
                     </div>
-                    <div class="card" data-url="https://bit.ly/TandaTerimaAPD_ASTO" target="_blank">
-                        <img src="APD K3.png" alt="Ikon Pelatihan">
-                        <h4>Tanda Terima APD</h4>
-                        <p>Informasi mengenai program pelatihan dan sertifikasi di bidang SHE.</p>
+
+                    <div class="card glass-effect" data-url="https://bit.ly/TandaTerimaAPD_ASTO" target="_blank">
+                        <div class="card-img-holder">
+                            <img src="APD K3.png" alt="APD">
+                        </div>
+                        <div class="card-body">
+                            <h4>Tanda Terima APD</h4>
+                            <p>Formulir digital pencatatan serah terima Alat Pelindung Diri.</p>
+                        </div>
+                        <div class="card-footer">
+                            <span>Isi Form <i class="fas fa-arrow-right"></i></span>
+                        </div>
                     </div>
-                    
-                     <div class="card" data-url="https://sites.google.com/view/list-daftar/home" target="_blank">
-                        <img src="TEKNIK.png" alt="Ikon Pelatihan">
-                        <h4>DAFTAR TENAGA TEKNIK KHUSUS KPP ASTO</h4>
-                        <p>Informasi mengenai program pelatihan dan sertifikasi di bidang SHE.</p>
+
+                    <div class="card glass-effect" data-url="https://sites.google.com/view/list-daftar/home"
+                        target="_blank">
+                        <div class="card-img-holder">
+                            <img src="TEKNIK.png" alt="Tenaga Teknik">
+                        </div>
+                        <div class="card-body">
+                            <h4>Data Tenaga Teknik</h4>
+                            <p>Daftar Tenaga Teknik Khusus yang terdaftar di KPP ASTO.</p>
+                        </div>
+                        <div class="card-footer">
+                            <span>Lihat Data <i class="fas fa-eye"></i></span>
+                        </div>
                     </div>
-                     <div class="card" data-url="https://eyesys.my.id/" target="_blank">
-                        <img src="EHAY.png" alt="Ikon Pelatihan">
-                        <h4>-EHAY SYSTEM- DEKLARASI PENGOBATAN/PERAWATAN</h4>
-                        <p>Silahkan isi Username dengan: NRPkaryawan@mail.com Password : NRP (huruf besar).</p>
+
+                    <div class="card glass-effect" data-url="https://eyesys.my.id/" target="_blank">
+                        <div class="card-img-holder">
+                            <img src="EHAY.png" alt="E-HAY">
+                        </div>
+                        <div class="card-body">
+                            <h4>EHAY SYSTEM</h4>
+                            <p>Deklarasi Pengobatan. Login: Email Karyawan & Password NRP.</p>
+                        </div>
+                        <div class="card-footer">
+                            <span>Login <i class="fas fa-sign-in-alt"></i></span>
+                        </div>
                     </div>
-                     <!-- Kartu Keselamatan Kerja -->
-                    <div class="card"
+
+                    <div class="card glass-effect"
                         data-url="https://docs.google.com/forms/d/e/1FAIpQLScvBBvZ8UCNweuwc_0jHW-PUPxEq4AyNSdKI6QrSgWeG8GkPg/viewform"
                         target="_blank">
-                        <img src="ASTO.png" alt="Ikon Keselamatan">
-                        <h4>Soal Induksi K3 SHE</h4>
-                        <p>Panduan dan informasi penting untuk menciptakan lingkungan kerja yang aman.</p>
+                        <div class="card-img-holder">
+                            <img src="ASTO.png" alt="Induksi K3">
+                        </div>
+                        <div class="card-body">
+                            <h4>Soal Induksi K3 SHE</h4>
+                            <p>Ujian dasar keselamatan kerja untuk karyawan baru/tamu.</p>
+                        </div>
+                        <div class="card-footer">
+                            <span>Mulai <i class="fas fa-arrow-right"></i></span>
+                        </div>
                     </div>
-                    <!-- Kartu Kesehatan Kerja -->
-                    <div class="card" data-url="https://sites.google.com/view/she-asto/hasil-induksi" target="_blank">
-                        <img src="Result.jpg" alt="Ikon Kesehatan">
-                        <h4>Hasil induksi SHE</h4>
-                        <p>Tips dan sumber daya untuk menjaga kesehatan dan kesejahteraan di tempat kerja.</p>
+
+                    <div class="card glass-effect" data-url="https://sites.google.com/view/she-asto/hasil-induksi"
+                        target="_blank">
+                        <div class="card-img-holder">
+                            <img src="Result.jpg" alt="Hasil SHE">
+                        </div>
+                        <div class="card-body">
+                            <h4>Hasil Induksi SHE</h4>
+                            <p>Cek kelulusan induksi umum keselamatan kesehatan kerja.</p>
+                        </div>
+                        <div class="card-footer">
+                            <span>Cek Data <i class="fas fa-search"></i></span>
+                        </div>
                     </div>
-                     <div class="card" data-url="https://elearning.abb-apps.com/Account/Login" target="_blank">
-                        <img src="Asmin.jpg" alt="Ikon Pelatihan">
-                        <h4>Soal BBS ABB for Pengawas</h4>
-                        <p>Soal untuk perpanjangan MINE PERMIT untuk PENGAWAS.soal berasal dari OWNER(PT.ASMIN BARA BRONANG).</p>
+
+                    <div class="card glass-effect" data-url="https://elearning.abb-apps.com/Account/Login"
+                        target="_blank">
+                        <div class="card-img-holder">
+                            <img src="Asmin.jpg" alt="BBS ABB">
+                        </div>
+                        <div class="card-body">
+                            <h4>BBS ABB (Pengawas)</h4>
+                            <p>Soal perpanjangan Mine Permit khusus level Pengawas (Owner).</p>
+                        </div>
+                        <div class="card-footer">
+                            <span>Akses ABB <i class="fas fa-link"></i></span>
+                        </div>
                     </div>
-                    <div class="card" data-url="https://forms.gle/bjr5ory6wmLRUS7v5" target="_blank">
-                        <img src="MCU.jpg" alt="Ikon Pelatihan">
-                        <h4>Pendaftaran MCU</h4>
-                        <p>Informasi mengenai program pelatihan dan sertifikasi di bidang SHE.</p>
+
+                    <div class="card glass-effect" data-url="https://forms.gle/bjr5ory6wmLRUS7v5" target="_blank">
+                        <div class="card-img-holder">
+                            <img src="MCU.jpg" alt="MCU">
+                        </div>
+                        <div class="card-body">
+                            <h4>Pendaftaran MCU</h4>
+                            <p>Registrasi pelaksanaan Medical Check Up berkala.</p>
+                        </div>
+                        <div class="card-footer">
+                            <span>Daftar <i class="fas fa-clipboard-list"></i></span>
+                        </div>
                     </div>
-                    <!-- Kartu Lingkungan -->
-<!--                      <div class="card" data-url="https://en.wikipedia.org/wiki/Environment,_health_and_safety/" target="_blank">
-                        <img src="INSPEKSI.png" alt="Ikon Pelatihan">
-                        <h4>PICA-Temuan Inspeksi</h4>
-                        <p>On Progress Development.</p>
-                    </div> -->
+
                 </div>
             </div>
         </section>
-        <!-- Bagian Berita Artikel Baru -->
+
         <section class="news-section">
             <div class="container">
-                <h3>Berita & Artikel Terbaru</h3>
+                <div class="section-title">
+                    <h3>Wawasan Terkini</h3>
+                    <div class="underline"></div>
+                </div>
                 <div class="news-grid">
-                    <!-- Artikel Berita 1 -->
-                    <div class="article-card">
-                        <img src="gambar1.jpg" alt="Audit Keselamatan">
+                    <div class="article-card glass-effect">
+                        <img src="gambar1.jpg" alt="Audit">
                         <div class="article-content">
-                            <h4>Pentingnya Audit Keselamatan Rutin di Tempat Kerja</h4>
-                            <p>Audit keselamatan yang teratur adalah kunci untuk mengidentifikasi potensi bahaya dan
-                                memastikan kepatuhan terhadap standar keselamatan.</p>
-                            <a href="#" class="read-more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                            <span class="date-badge">Terbaru</span>
+                            <h4>Audit Keselamatan Rutin</h4>
+                            <p>Kunci identifikasi bahaya dan kepatuhan standar keselamatan kerja.</p>
+                            <a href="#" class="read-more">Baca <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
-                    <!-- Artikel Berita 2 -->
-                    <div class="article-card">
-                        <img src="induksi.jpeg" alt="Kesehatan Mental">
+                    <div class="article-card glass-effect">
+                        <img src="induksi.jpeg" alt="Mental Health">
                         <div class="article-content">
-                            <h4>Menjaga Kesehatan Mental Pekerja di Era Modern</h4>
-                            <p>Kesehatan mental yang baik sangat vital. Pelajari strategi untuk mendukung kesejahteraan
-                                psikologis karyawan Anda.</p>
-                            <a href="#" class="read-more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                            <span class="date-badge">Kesehatan</span>
+                            <h4>Kesehatan Mental Pekerja</h4>
+                            <p>Strategi mendukung kesejahteraan psikologis di area pertambangan.</p>
+                            <a href="#" class="read-more">Baca <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
-                    <!-- Artikel Berita 3 -->
-
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer Website -->
     <footer>
-        <div class="container footer-content">
-            <div class="footer-section about">
-                <h4>Tentang SHE Plant ASTO</h4>
-                <p>Kami berkomitmen untuk menyediakan informasi dan sumber daya terbaik dalam bidang Keselamatan,
-                    Kesehatan, dan Lingkungan.</p>
-            </div>
-            <div class="footer-section contact-info">
-                <h4>Kontak Kami</h4>
-                <p><i class="fas fa-map-marker-alt"></i> Jl. Hauling JABB KM.25, Kota Kahukup, Negara Indonesia</p>
-                <p><i class="fas fa-phone"></i> +62 822 51213 4945</p>
-                <p><i class="fas fa-envelope"></i> arif.setiawan@kppmining.com</p>
-            </div>
-            <div class="footer-section social">
-                <h4>Ikuti Kami</h4>
-                <div class="social-links">
-                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.instagram.com/ppd_kpp_asto/?hl=en" target="_blank"><i
-                            class="fab fa-instagram"></i></a>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h2>SHE PLANT ASTO</h2>
+                    <p>Berkomitmen menciptakan lingkungan kerja Zero Accident melalui inovasi dan kepedulian.</p>
+                </div>
+                <div class="footer-info">
+                    <h4>Hubungi Kami</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Jl. Hauling JABB KM.25, Kota Kahukup</li>
+                        <li><i class="fas fa-phone"></i> +62 822 51213 4945</li>
+                        <li><i class="fas fa-envelope"></i> arif.setiawan@kppmining.com</li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Ikuti Kami</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/ppd_kpp_asto/?hl=en"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 SHE Plant Asto Digital Innovation.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SHE Plant Asto Digital Innovation. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
 
@@ -199,34 +284,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
